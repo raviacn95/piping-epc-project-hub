@@ -255,14 +255,10 @@ function buildLinkedInText(post) {
     rules = bullets.slice(0, 3).map((b) => b.replace(/^[\-]\s*/, "\u2022 ")).join("\n\n");
   }
 
-  // Try This: first code snippet, trimmed to 3 lines
-  let tryCode = extractSection("Try This");
-  if (!tryCode) {
-    const code = extractFirstCodeBlock();
-    tryCode = code ? firstLines(code, 3) : "";
-  } else {
-    tryCode = firstLines(tryCode, 3);
-  }
+  // Real Example: short practical example, 2 lines max
+  let realExample = extractSection("Real Example");
+  if (!realExample) realExample = extractSection("Try This");
+  realExample = firstLines(realExample, 2);
 
   // Quick Quiz: first Q&A pair
   let quizText = "";
@@ -280,7 +276,7 @@ function buildLinkedInText(post) {
   const body = [];
   if (concept) body.push("Core Concept " + concept);
   if (rules) body.push("Key Rules\n\n" + rules);
-  if (tryCode) body.push("\uD83D\uDCA1 Try This " + tryCode);
+  if (realExample) body.push("\uD83D\uDCCC Real Example\n\n" + realExample);
   if (quizText) body.push("\u2753 Quick Quiz\n\n" + quizText);
   if (takeaway) body.push("\uD83D\uDD11 Key Takeaway " + takeaway);
 
@@ -312,7 +308,7 @@ function buildLinkedInText(post) {
     "",
     separator,
     "",
-    "\uD83D\uDD17 Read the full guide with code examples & step-by-step instructions:",
+    "\uD83D\uDD17 Read the full guide with real examples & step-by-step instructions:",
     websiteLink
   ];
 
@@ -527,11 +523,28 @@ async function ensureLoggedIn(page, context) {
   await page.goto("https://www.linkedin.com/feed/", { waitUntil: "domcontentloaded", timeout: 60000 });
 
   if (page.url().includes("/login") || page.url().includes("/checkpoint")) {
-    console.log("Manual login required. Sign in in the opened browser, then press Enter here.");
-    await ask("Press Enter after LinkedIn feed is visible...");
+    const waitMin = parseInt(process.env.LOGIN_WAIT_MINUTES || "0", 10);
+    if (waitMin > 0) {
+      console.log(`Manual login required. Waiting ${waitMin} minute(s) for you to sign in...`);
+      await page.waitForTimeout(waitMin * 60 * 1000);
+      await page.goto("https://www.linkedin.com/feed/", { waitUntil: "domcontentloaded", timeout: 60000 });
+    } else {
+      console.log("Manual login required. Sign in in the opened browser, then press Enter here.");
+      await ask("Press Enter after LinkedIn feed is visible...");
+    }
     await context.storageState({ path: STORAGE_STATE_FILE });
     console.log(`Saved session to ${STORAGE_STATE_FILE}`);
   }
+
+  // Confirm before posting — countdown gives user time to cancel with Ctrl+C
+  const confirmSec = parseInt(process.env.CONFIRM_WAIT_SECONDS || "30", 10);
+  console.log(`\n✅ Login confirmed! Posting will start in ${confirmSec} seconds.`);
+  console.log(">>> Press Ctrl+C NOW to cancel if wrong account. <<<\n");
+  for (let i = confirmSec; i > 0; i--) {
+    process.stdout.write(`  Starting in ${i}s...\r`);
+    await page.waitForTimeout(1000);
+  }
+  console.log("\nProceeding with posting...\n");
 }
 
 async function clickFirstVisible(page, selectors) {
