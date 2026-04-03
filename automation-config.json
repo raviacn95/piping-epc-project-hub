@@ -1,0 +1,73 @@
+{
+  "scheduler": {
+    "enabled": true,
+    "intervalMinutes": 60,
+    "intervalJitterPercent": 20,
+    "runImmediately": true,
+    "maxRuns": 0
+  },
+  "linkedin": {
+    "postCount": 2,
+    "startIndex": 0,
+    "delayBetweenPostsMinSec": 20,
+    "delayBetweenPostsMaxSec": 45,
+    "prePostDelayMinSec": 2,
+    "prePostDelayMaxSec": 4
+  },
+  "safetyLimits": {
+    "maxPostsPerDay": 26,
+    "similarityThreshold": 0.6,
+    "maxHistory": 50
+  },
+  "contentGeneration": {
+    "sourceMode": "topics",
+    "targetPostCount": 50,
+    "pdfPath": "",
+    "promptForPdfPath": true,
+    "defaultCategory": "Piping",
+    "autoGenerateOnEveryRun": true,
+    "topicPool": [
+      "Piping",
+      "Primavera",
+      "SAP",
+      "Shutdown",
+      "AutoCAD",
+      "Project Control",
+      "EPC"
+    ],
+    "tags": [
+      "piping engineering",
+      "project planning",
+      "epc projects"
+    ],
+    "outputFile": "posts-data.js"
+  },
+  "aiGeneration": {
+    "enabled": false,
+    "endpoint": "https://api.openai.com/v1/chat/completions",
+    "model": "gpt-4o-mini",
+    "apiKeyEnvVar": "OPENAI_API_KEY",
+    "systemPrompt": "Generate high-quality technical posts about piping engineering, project planning, and EPC project control as valid JSON only."
+  },
+  "freeAiGeneration": {
+    "enabled": true,
+    "provider": "copilot",
+    "multiProvider": true,
+    "concurrentWorkers": 3,
+    "batchDelayMs": 1000,
+    "maxRetriesPerProvider": 4,
+    "copilot": {
+      "apiKeyEnvVar": "GITHUB_TOKEN",
+      "model": "gpt-4o-mini",
+      "minIntervalMs": 65000
+    },
+    "groq": {
+      "apiKeyEnvVar": "GROQ_API_KEY",
+      "model": "llama-3.1-8b-instant"
+    },
+    "gemini": {
+      "apiKeyEnvVar": "GEMINI_API_KEY",
+      "model": "gemini-1.5-flash"
+    }
+  }
+}

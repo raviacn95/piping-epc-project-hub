@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piping · EPC · Project Control — Learning Hub | Basics to Expert | Free 2026</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="50+ free detailed tutorial guides covering Piping Engineering, Primavera P6, SAP ERP, Shutdown Planning, EPC Projects & Project Control — from beginner to expert level. Step-by-step examples, best practices, FAQs, and real-world scenarios." />
+    <meta name="keywords" content="piping engineering tutorial, Primavera P6 guide, SAP ERP project system, shutdown planning, EPC projects, project control, earned value management, cost control, ASME standards, pipe stress analysis, AutoCAD piping, critical path method, turnaround planning, contract management, construction planning, Bill of Quantities, 2026" />
+    <meta name="author" content="Ravi" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://raviacn95.github.io/piping-epc-project-hub/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Piping · EPC · Project Control — Learning Hub | Free 2026" />
+    <meta property="og:description" content="50+ free detailed tutorial guides from beginner to expert level. Step-by-step examples, best practices, FAQs, and real-world scenarios." />
+    <meta property="og:url" content="https://raviacn95.github.io/piping-epc-project-hub/" />
+    <meta property="og:site_name" content="Piping EPC Project Control Learning Hub" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Piping · EPC · Project Control — Learning Hub" />
+    <meta name="twitter:description" content="50+ free detailed tutorial guides from beginner to expert level with step-by-step examples, best practices, and FAQs." />
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Piping EPC Project Control Learning Hub",
+      "url": "https://raviacn95.github.io/piping-epc-project-hub/",
+      "description": "50+ free detailed tutorial guides covering Piping Engineering, Primavera P6, SAP ERP, and EPC Project Control",
+      "publisher": { "@type": "Person", "name": "Ravi" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://raviacn95.github.io/piping-epc-project-hub/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Structured Data: Blog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Piping EPC Project Control Learning Hub",
+      "url": "https://raviacn95.github.io/piping-epc-project-hub/",
+      "description": "Comprehensive learning resource with 50+ detailed tutorial guides",
+      "blogPost": [
+        { "@type": "BlogPosting", "headline": "Piping Engineering Fundamentals", "keywords": "piping, engineering, design" },
+        { "@type": "BlogPosting", "headline": "Oracle Primavera P6 Complete Guide", "keywords": "primavera, scheduling, planning" }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is Piping Engineering?", "acceptedAnswer": { "@type": "Answer", "text": "Piping Engineering involves the design, layout, and analysis of piping systems that transport fluids in industrial plants such as refineries, chemical plants, and power plants." } },
+        { "@type": "Question", "name": "What is Primavera P6 used for?", "acceptedAnswer": { "@type": "Answer", "text": "Oracle Primavera P6 is a project management software used for planning, scheduling, and controlling large-scale EPC and construction projects using CPM methodology." } },
+        { "@type": "Question", "name": "What is EPC in project management?", "acceptedAnswer": { "@type": "Answer", "text": "EPC stands for Engineering, Procurement, and Construction — a common project delivery method in oil & gas, petrochemical, and infrastructure sectors." } }
+      ]
+    }
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2441085120272132" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="reading-progress"></div>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo" id="nav-home">
+          <span class="logo-icon">🏗️</span>
+          <span class="logo-text">EPC Hub</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="#" class="nav-link active" data-filter="All">All</a>
+          <a href="#" class="nav-link" data-filter="Piping">Piping</a>
+          <a href="#" class="nav-link" data-filter="Primavera">Primavera</a>
+          <a href="#" class="nav-link" data-filter="SAP">SAP</a>
+          <a href="#" class="nav-link" data-filter="Shutdown">Shutdown</a>
+          <a href="#" class="nav-link" data-filter="AutoCAD">AutoCAD</a>
+          <a href="#" class="nav-link" data-filter="Project Control">Project Control</a>
+          <a href="#" class="nav-link" data-filter="EPC">EPC</a>
+        </div>
+        <div class="nav-search">
+          <input type="search" id="search" placeholder="Search tutorials..." aria-label="Search tutorials" />
+        </div>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+      </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <header class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-badge">Free · Open Source · 50+ Tutorials</div>
+        <h1>Master <span class="hero-hl">Piping Engineering</span>, <span class="hero-hl">Primavera P6</span> &amp; <span class="hero-hl">EPC Projects</span></h1>
+        <p class="hero-sub">From beginner fundamentals to expert-level project control. Each tutorial includes step-by-step workflows, industry standards, best practices, and real-world EPC scenarios.</p>
+        <div class="hero-levels">
+          <button class="level-btn active" data-level="All">All Levels</button>
+          <button class="level-btn lb-beginner" data-level="beginner">🌱 Beginner</button>
+          <button class="level-btn lb-intermediate" data-level="intermediate">⭐ Intermediate</button>
+          <button class="level-btn lb-advanced" data-level="advanced">🚀 Advanced</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><span class="hs-num">50+</span><span class="hs-label">Tutorials</span></div>
+          <div class="hero-stat"><span class="hs-num">7</span><span class="hs-label">Domains</span></div>
+          <div class="hero-stat"><span class="hs-num">Free</span><span class="hs-label">Forever</span></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- AD: Top Leaderboard -->
+    <div class="ad-slot ad-leaderboard">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2441085120272132" data-ad-slot="TOP_SLOT_ID" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- ============ HOME VIEW ============ -->
+    <main class="home-view" id="home-view">
+      <div class="container">
+        <div class="feed-header">
+          <h2 id="feed-title">All Tutorials</h2>
+          <span class="post-count" id="post-count"></span>
+        </div>
+        <div class="posts-grid" id="posts-grid"></div>
+      </div>
+
+      <!-- AD: Mid-content -->
+      <div class="ad-slot ad-mid">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2441085120272132" data-ad-slot="MID_SLOT_ID" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- AFFILIATE -->
+      <section class="section-wrap" id="resources">
+        <div class="container">
+          <div class="section-header">
+            <h2>🔧 Recommended Tools & Resources</h2>
+            <p>Handpicked tools and courses for piping engineers & project planners — affiliate links help keep this hub free</p>
+          </div>
+          <div class="affiliate-grid">
+            <a href="https://www.udemy.com/topic/primavera-p6/" class="affiliate-card" target="_blank" rel="noopener noreferrer sponsored">
+              <div class="aff-icon">📊</div><h3>Primavera P6 Courses</h3><p>Master project scheduling & CPM</p><span class="aff-cta">Browse →</span>
+            </a>
+            <a href="https://www.udemy.com/topic/autocad/" class="affiliate-card" target="_blank" rel="noopener noreferrer sponsored">
+              <div class="aff-icon">📐</div><h3>AutoCAD Masterclass</h3><p>2D/3D drafting & design</p><span class="aff-cta">Enroll →</span>
+            </a>
+            <a href="https://www.udemy.com/topic/sap/" class="affiliate-card" target="_blank" rel="noopener noreferrer sponsored">
+              <div class="aff-icon">💼</div><h3>SAP ERP Training</h3><p>PS, MM & project system modules</p><span class="aff-cta">Learn →</span>
+            </a>
+            <a href="https://www.udemy.com/topic/piping-engineering/" class="affiliate-card" target="_blank" rel="noopener noreferrer sponsored">
+              <div class="aff-icon">🔧</div><h3>Piping Engineering</h3><p>Design, stress analysis & MTO</p><span class="aff-cta">Browse →</span>
+            </a>
+            <a href="https://www.hostinger.com/" class="affiliate-card" target="_blank" rel="noopener noreferrer sponsored">
+              <div class="aff-icon">🌐</div><h3>Hostinger Hosting</h3><p>Fast hosting. Up to 75% off.</p><span class="aff-cta">Get Hosting →</span>
+            </a>
+            <a href="https://www.semrush.com/" class="affiliate-card" target="_blank" rel="noopener noreferrer sponsored">
+              <div class="aff-icon">📈</div><h3>SEMrush SEO</h3><p>Keyword research & analysis</p><span class="aff-cta">Free Trial →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- EMAIL LEAD MAGNET -->
+      <section class="lead-magnet" id="newsletter">
+        <div class="lead-magnet-inner">
+          <div class="lm-icon">📧</div>
+          <h2>Get the Free EPC Project Cheat Sheet</h2>
+          <p>Join 1,000+ engineers. Get <strong>"Top 50 Piping + Primavera + SAP Project Hacks"</strong> PDF — plus weekly tips.</p>
+          <form class="lm-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="9ae0f5b6-8b8b-40ac-a5ba-cdfdfa1e4420" />
+            <input type="hidden" name="subject" value="New Newsletter Subscriber - EPC Hub" />
+            <input type="hidden" name="from_name" value="EPC Hub" />
+            <input type="hidden" name="redirect" value="https://raviacn95.github.io/piping-epc-project-hub/" />
+            <input type="email" name="email" placeholder="you@example.com" required class="lm-email" />
+            <button type="submit" class="lm-btn">🎁 Send Me the Cheat Sheet</button>
+          </form>
+          <p class="lm-note">No spam, ever. Unsubscribe anytime.</p>
+        </div>
+      </section>
+
+      <!-- DIGITAL PRODUCTS -->
+      <section class="section-wrap" id="products">
+        <div class="container">
+          <div class="section-header">
+            <h2>🛒 Digital Products & Templates</h2>
+            <p>Ready-to-use resources to 10x your project delivery</p>
+          </div>
+          <div class="products-grid">
+            <div class="product-card">
+              <div class="product-badge">Popular</div>
+              <div class="product-icon">📦</div>
+              <h3>Primavera P6 Starter Kit</h3>
+              <p>WBS templates, baseline plans, progress tracking sheets, CPM examples.</p>
+              <div class="product-price">₹499 <span class="product-price-old">₹999</span></div>
+              <a href="https://gumroad.com/" class="product-btn" target="_blank" rel="noopener noreferrer">Get Now →</a>
+            </div>
+            <div class="product-card">
+              <div class="product-badge">New</div>
+              <div class="product-icon">📄</div>
+              <h3>Shutdown Planning Pack</h3>
+              <p>Turnaround checklists, permit matrices, risk assessment templates.</p>
+              <div class="product-price">₹799 <span class="product-price-old">₹1499</span></div>
+              <a href="https://gumroad.com/" class="product-btn" target="_blank" rel="noopener noreferrer">Get It Now →</a>
+            </div>
+            <div class="product-card">
+              <div class="product-icon">📚</div>
+              <h3>EPC Interview Prep eBook</h3>
+              <p>200+ interview questions covering piping, planning, SAP & project control.</p>
+              <div class="product-price">₹299 <span class="product-price-old">₹599</span></div>
+              <a href="https://gumroad.com/" class="product-btn" target="_blank" rel="noopener noreferrer">Get It Now →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONSULTING -->
+      <section class="consulting-section" id="consulting">
+        <div class="container">
+          <div class="consulting-grid">
+            <div class="consulting-text">
+              <h2>🎓 1-on-1 Consulting & Training</h2>
+              <p>Need help with <strong>Piping Design, Primavera P6 scheduling, or SAP Project Setup</strong>? Book a personalised session.</p>
+              <ul class="consulting-features">
+                <li>✅ Piping layout & stress analysis review</li>
+                <li>✅ Primavera P6 scheduling strategy</li>
+                <li>✅ SAP PS / MM module configuration</li>
+                <li>✅ Shutdown turnaround planning</li>
+                <li>✅ Team workshops (remote or on-site)</li>
+              </ul>
+              <div class="consulting-actions">
+                <a href="mailto:raviacn95@gmail.com?subject=EPC%20Consulting%20Request" class="btn-primary-lg">📅 Book a Session</a>
+                <a href="https://www.linkedin.com/in/raviacn95/" class="btn-outline-lg" target="_blank" rel="noopener noreferrer">💬 LinkedIn</a>
+              </div>
+            </div>
+            <div class="consulting-stats">
+              <div class="stat-card"><div class="stat-num">8+</div><div class="stat-lbl">Years Experience</div></div>
+              <div class="stat-card"><div class="stat-num">50+</div><div class="stat-lbl">Projects Delivered</div></div>
+              <div class="stat-card"><div class="stat-num">50+</div><div class="stat-lbl">Free Tutorials</div></div>
+              <div class="stat-card"><div class="stat-num">EPC</div><div class="stat-lbl">& Planning Expert</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AD: Pre-footer -->
+      <div class="ad-slot ad-prefooter">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2441085120272132" data-ad-slot="BOTTOM_SLOT_ID" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- SUPPORT -->
+      <section class="support-section">
+        <div class="container" style="text-align:center">
+          <h2>☕ Support This Hub</h2>
+          <p>If this hub helped you, consider buying me a coffee.</p>
+          <div class="support-buttons">
+            <a href="https://buymeacoffee.com/raviacn95" class="btn-coffee" target="_blank" rel="noopener noreferrer">☕ Buy Me a Coffee</a>
+            <a href="https://github.com/sponsors/raviacn95" class="btn-sponsor" target="_blank" rel="noopener noreferrer">💖 GitHub Sponsors</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ POST VIEW (Full Page) ============ -->
+    <main class="post-view hidden" id="post-view">
+      <div class="pv-layout">
+        <!-- Sidebar TOC -->
+        <aside class="pv-sidebar" id="pv-sidebar">
+          <button class="pv-back" id="pv-back">← All Tutorials</button>
+          <nav class="pv-toc" id="pv-toc"></nav>
+          <div class="ad-slot ad-sidebar-sticky">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2441085120272132" data-ad-slot="SIDEBAR_SLOT_ID" data-ad-format="vertical" data-full-width-responsive="false"></ins>
+          </div>
+        </aside>
+
+        <!-- Article -->
+        <article class="pv-article" id="pv-article">
+          <div class="pv-breadcrumb" id="pv-breadcrumb"></div>
+          <div class="pv-meta" id="pv-meta"></div>
+          <h1 class="pv-title" id="pv-title"></h1>
+          <p class="pv-excerpt" id="pv-excerpt"></p>
+          <div class="pv-tags" id="pv-tags"></div>
+
+          <!-- AD: in-article top -->
+          <div class="ad-slot ad-in-article">
+            <ins class="adsbygoogle" style="display:block;text-align:center" data-ad-client="ca-pub-2441085120272132" data-ad-slot="ARTICLE_TOP_ID" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          </div>
+
+          <!-- Mobile TOC -->
+          <details class="pv-toc-mobile" id="pv-toc-mobile">
+            <summary>📋 Table of Contents</summary>
+            <nav id="pv-toc-mobile-list"></nav>
+          </details>
+
+          <div class="pv-body" id="pv-body"></div>
+
+          <!-- AD: in-article bottom -->
+          <div class="ad-slot ad-in-article-bottom">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2441085120272132" data-ad-slot="ARTICLE_BOTTOM_ID" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          </div>
+
+          <!-- Share -->
+          <div class="pv-share" id="pv-share">
+            <span>Share:</span>
+            <a class="share-btn share-twitter" id="share-twitter" target="_blank" rel="noopener noreferrer">𝕏 Twitter</a>
+            <a class="share-btn share-linkedin" id="share-linkedin" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
+            <button class="share-btn share-copy" id="share-copy">📋 Copy Link</button>
+          </div>
+
+          <!-- Author -->
+          <div class="pv-author">
+            <div class="author-info">
+              <strong>Written by Ravi</strong>
+              <p>8+ years in EPC project delivery, piping engineering & project control. Building free tutorials for the engineering community.</p>
+            </div>
+            <a href="https://www.linkedin.com/in/raviacn95/" class="btn-outline-sm" target="_blank" rel="noopener noreferrer">Follow on LinkedIn</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Related Posts -->
+      <section class="related-section">
+        <div class="container">
+          <h2>📚 Related Tutorials You'll Love</h2>
+          <div class="related-grid" id="related-grid"></div>
+        </div>
+      </section>
+
+      <!-- AD: after related -->
+      <div class="ad-slot ad-after-related">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2441085120272132" data-ad-slot="RELATED_BOTTOM_ID" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      </div>
+
+      <!-- Newsletter CTA -->
+      <section class="lead-magnet lm-compact">
+        <div class="lead-magnet-inner">
+          <h2>📧 Enjoyed this? Get more free!</h2>
+          <form class="lm-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="9ae0f5b6-8b8b-40ac-a5ba-cdfdfa1e4420" />
+            <input type="hidden" name="subject" value="Subscriber — Post View EPC" />
+            <input type="hidden" name="from_name" value="EPC Hub" />
+            <input type="hidden" name="redirect" value="https://raviacn95.github.io/piping-epc-project-hub/" />
+            <input type="email" name="email" placeholder="you@example.com" required class="lm-email" />
+            <button type="submit" class="lm-btn">🎁 Get Free Cheat Sheet</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>🏗️ EPC Hub</h3>
+            <p>50+ free structured tutorials for Piping Engineering, Primavera P6, SAP & EPC Project Control — from basics to expert level.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Topics</h4>
+            <a href="#" data-footer-filter="Piping">Piping Engineering</a>
+            <a href="#" data-footer-filter="Primavera">Primavera P6</a>
+            <a href="#" data-footer-filter="SAP">SAP ERP</a>
+            <a href="#" data-footer-filter="Shutdown">Shutdown Planning</a>
+            <a href="#" data-footer-filter="Project Control">Project Control</a>
+            <a href="#" data-footer-filter="EPC">EPC Projects</a>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="#resources">Recommended Tools</a>
+            <a href="#products">Digital Products</a>
+            <a href="#consulting">Consulting</a>
+            <a href="#newsletter">Newsletter</a>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="https://www.linkedin.com/in/raviacn95/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/raviacn95" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="mailto:raviacn95@gmail.com">Email</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 <a href="https://github.com/raviacn95" target="_blank" rel="noopener noreferrer">Ravi</a> · Hosted on GitHub Pages · Open Source</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top hidden" id="back-to-top" aria-label="Back to top">↑</button>
+
+    <script src="posts-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
